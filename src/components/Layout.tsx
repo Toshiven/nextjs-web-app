@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Box from "@mui/material/Box"
-import Navbar from "./Navbar"
-import Sidebar from "./Sidebar"
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -24,8 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Layout
-
+export default Layout;

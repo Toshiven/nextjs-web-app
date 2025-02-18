@@ -1,21 +1,18 @@
-"use client"
-import { Typography } from "@mui/material"
-import { useRouter } from "next/navigation"
+"use client";
+import { Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function page() {
-   const router = useRouter();
+  const router = useRouter();
 
-   useEffect(() => {
+  useEffect(() => {
     const user = localStorage.getItem("user");
-    if(!user) router.push("/auth/login");
-   }, []);
+    if (!user) router.push("/auth/login");
+  }, []);
   return (
-  <div>
-<Typography variant="h1">
-  DASHBOARD 
-  </Typography> 
-  </div>
-
-  )
-    }
+    <div>
+      <Typography variant="h1">DASHBOARD</Typography>
+    </div>
+  );
+}
